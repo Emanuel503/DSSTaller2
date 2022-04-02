@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@media (max-width: 1000px) {
+    .titulo-img{
+        display: none;
+    }
+}
+
+body{
+    background-color: rgb(79, 104, 121);
+}
+
+.botones{
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.titulo{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 60px;
+    color: white;
+    display: inline;
+}
+
+.titulo-img{
+    width: 300px;
+    float: right;
+}
+
+.btn-registrar{
+    float: right;
+}
