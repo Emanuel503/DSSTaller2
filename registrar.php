@@ -1,12 +1,11 @@
 <?php
-    include("conexion.php");
-
     $nombres = $_POST['nombres'];
     $apellidos = $_POST['apellidos'];
-    $grado = $_POST['grado'];
-    $fechaNacimiento = $_POST['fechaNacimiento'];
+    $cargo = $_POST['cargo'];
+    $fecha_nacimiento = $_POST['fecha_nacimiento'];
 
-    $query = "INSERT INTO estudiantes(nombres,apellidos,grado,fechaNacimiento) VALUES ('$nombres','$apellidos','$grado','$fechaNacimiento')";
-    $resultado=$conexion->query($query);
-    Header( 'location: index.php');
+    $conexion = pg_connect("host=localhost dbname=taller2 user=postgres password=admin");
+    $query = "INSERT INTO empleados(nombres,apellidos,cargo,fecha_nacimiento) VALUES ('$nombres','$apellidos','$cargo','$fecha_nacimiento')";
+    pg_query($conexion, $query);
+    Header( 'location: index.php?guardado');
 ?>

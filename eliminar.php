@@ -1,9 +1,8 @@
 <?php
-    include("conexion.php");
-
     $id = $_REQUEST['id'];
 
-    $query = "DELETE FROM estudiantes WHERE id='$id'";
-    $resultado=$conexion->query($query);
-    Header( 'location: index.php');
+    $conexion = pg_connect("host=localhost dbname=taller2 user=postgres password=admin");
+    $query ="DELETE FROM empleados WHERE id='$id'";
+    pg_query($conexion, $query);
+    Header( 'location: index.php?eliminado');
 ?>

@@ -7,7 +7,7 @@
 }
 
 body{
-    background-color: rgb(79, 104, 121);
+    background-color: rgb(161, 161, 161);
 }
 
 .botones{
@@ -23,10 +23,10 @@ body{
 }
 
 .titulo-img{
-    width: 300px;
+    width: 120px;
     float: right;
 }
 
-.btn-registrar{
+.btn-pdf{
     float: right;
 }
